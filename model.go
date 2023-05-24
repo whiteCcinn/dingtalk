@@ -105,7 +105,7 @@ func NewMarkDownMsg(title string, text interface{}, opts ...atOption) *markDownM
 	if len(msg.At.AtMobiles) > 0 {
 		var atStr = "\n"
 		for _, mobile := range msg.At.AtMobiles {
-			atStr = atStr + fmt.Sprintf(hMap[BLUE], " @"+mobile)
+			atStr = atStr + fmt.Sprintf("<div style=\"background-color: blue; color: white;\">%s</div>", " @"+mobile)
 		}
 		msg.Markdown.Text = msg.Markdown.Text + atStr
 	}
