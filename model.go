@@ -102,13 +102,13 @@ func NewMarkDownMsg(title string, text interface{}, opts ...atOption) *markDownM
 		opt.apply(&msg.At)
 	}
 	// markdown格式需要在文本内写入被at的人
-	if len(msg.At.AtMobiles) > 0 {
-		var atStr = "\n"
-		for _, mobile := range msg.At.AtMobiles {
-			atStr = atStr + fmt.Sprintf("<div style=\"background-color: blue; color: white;\">%s</div>", " @"+mobile)
-		}
-		msg.Markdown.Text = msg.Markdown.Text + atStr
-	}
+	//if len(msg.At.AtMobiles) > 0 {
+	//	var atStr = "\n"
+	//	for _, mobile := range msg.At.AtMobiles {
+	//		atStr = atStr + fmt.Sprintf(hMap[BLUE], " @"+mobile)
+	//	}
+	//	msg.Markdown.Text = msg.Markdown.Text + atStr
+	//}
 	return msg
 }
 
